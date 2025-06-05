@@ -194,7 +194,7 @@ def upload_scan():
         
         db.session.add(scan)
         db.session.commit()
-
+        os.remove(file_path)
         scan_details = {'id':scan.id,'user_id':scan.user_id,'imagepath':scan.image_path,'pred':scan.prediction,'conf':scan.confidence,'severity':scan.severity,'datetime':scan.created_at}
         return jsonify({
             "message": "Scan uploaded and analyzed successfully",
