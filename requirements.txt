@@ -9,4 +9,4 @@ opencv-python
 numpy
 sqlalchemy
 flask_sqlalchemy
-psycopg2
+psycopg2-binary
